@@ -131,7 +131,22 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
 #scriptStatus{min-height:22px;text-align:center;color:#75e0a0;margin-top:8px}
 .script-help{font-size:13px;text-align:left!important}
 </style>
-<style>#adminAccess{position:fixed;right:18px;bottom:18px;z-index:1000;padding:10px 14px;border-radius:14px}#adminGate{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:1001;align-items:center;justify-content:center}.open{display:flex!important}.admin-box{background:#161d2b;color:white;padding:24px;border-radius:20px;width:min(390px,90%)}#adminArea{display:none}.show{display:block!important}.tape-zone{position:relative;margin:28px 0;padding:35px 18px;border:3px dashed #f2c94c;border-radius:18px}.tape{position:absolute;left:0;right:0;height:32px;background:#f2c94c;color:#111;font-weight:900;text-align:center}.top{top:-16px}.bottom{bottom:-16px}</style></head>
+<style>#adminAccess{position:fixed;right:18px;bottom:18px;z-index:1000;padding:10px 14px;border-radius:14px}#adminGate{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:1001;align-items:center;justify-content:center}.open{display:flex!important}.admin-box{background:#161d2b;color:white;padding:24px;border-radius:20px;width:min(390px,90%)}#adminArea{display:none}.show{display:block!important}.tape-zone{position:relative;margin:28px 0;padding:35px 18px;border:3px dashed #f2c94c;border-radius:18px}.tape{position:absolute;left:0;right:0;height:32px;background:#f2c94c;color:#111;font-weight:900;text-align:center}.top{top:-16px}.bottom{bottom:-16px}</style>
+<style id="real-car-remake">
+#vehicles{scroll-margin-top:90px}
+.real-car-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.real-car-card{background:#151b27;border:1px solid #334056;border-radius:18px;overflow:hidden;text-align:left;padding:0;color:#fff;cursor:pointer;transition:transform .18s,box-shadow .18s}
+.real-car-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.3)}
+.real-car-card img{display:block;width:100%;height:165px;object-fit:cover;background:#202a3b}
+.real-car-info{padding:14px}
+.real-car-info h3{margin:0 0 7px;font-size:18px}
+.real-car-info p{margin:0;color:#b7c3d4;font-size:14px}
+.car-badge{display:inline-block;margin-top:11px;padding:5px 9px;border-radius:999px;background:#2b3850;color:#e8eef7;font-size:12px;font-weight:800}
+@media(max-width:850px){.real-car-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.real-car-grid{grid-template-columns:1fr}}
+</style>
+
+</head>
 <body>
 <header>
   <h1>🏙️ Brookhaven Wiki</h1>
@@ -264,23 +279,64 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
   <div class="modal hidden" id="carPhotoModal">
     <div class="modal-box photo-modal-box">
       <button class="close-modal" id="closeCarPhoto">×</button>
-      <img id="carPhotoImage" class="full-photo" src="" alt="">
-      <h2 id="carPhotoName"></h2>
-      <p id="carPhotoDesc" class="muted"></p>
-      <p class="photo-note">Billederne er eksterne in-game screenshots og bruges her som visuelle referencer.</p>
-    </div>
+      <img id="carPhotoImage" class="full-photo" src="" alt<section class="section" id="vehicles">
+  <div class="section-head">
+    <div><h2>🚗 Vehicles</h2><p class="muted">Rigtige bilbilleder — klik på en bil for detaljer.</p></div>
+    <span class="count-badge">12 Vehicles</span>
   </div>
+  <div class="real-car-grid">
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Ford Fairline','Type: Classic Car. Krav: VIP.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?classic%20car" alt="Ford Fairline" loading="lazy">
+<div class="real-car-info"><h3>Ford Fairline</h3><p>Classic Car</p><span class="car-badge">VIP</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Old Lamborghini','Type: Supercar. Krav: VIP.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?lamborghini%20car" alt="Old Lamborghini" loading="lazy">
+<div class="real-car-info"><h3>Old Lamborghini</h3><p>Supercar</p><span class="car-badge">VIP</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Sports Coupe','Type: Sports Car. Krav: Premium.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?sports%20car" alt="Sports Coupe" loading="lazy">
+<div class="real-car-info"><h3>Sports Coupe</h3><p>Sports Car</p><span class="car-badge">Premium</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Luxury SUV','Type: SUV. Krav: Premium.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?luxury%20suv" alt="Luxury SUV" loading="lazy">
+<div class="real-car-info"><h3>Luxury SUV</h3><p>SUV</p><span class="car-badge">Premium</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 City Sedan','Type: Car. Krav: Free.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?modern%20sedan" alt="City Sedan" loading="lazy">
+<div class="real-car-info"><h3>City Sedan</h3><p>Car</p><span class="car-badge">Free</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Classic Pickup','Type: Truck. Krav: Free.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?pickup%20truck" alt="Classic Pickup" loading="lazy">
+<div class="real-car-info"><h3>Classic Pickup</h3><p>Truck</p><span class="car-badge">Free</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Family Van','Type: Van. Krav: Free.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?family%20van" alt="Family Van" loading="lazy">
+<div class="real-car-info"><h3>Family Van</h3><p>Van</p><span class="car-badge">Free</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Police Cruiser','Type: Emergency. Krav: Free.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?police%20car" alt="Police Cruiser" loading="lazy">
+<div class="real-car-info"><h3>Police Cruiser</h3><p>Emergency</p><span class="car-badge">Free</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Roadster','Type: Sports Car. Krav: Premium.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?roadster%20car" alt="Roadster" loading="lazy">
+<div class="real-car-info"><h3>Roadster</h3><p>Sports Car</p><span class="car-badge">Premium</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Off-Road SUV','Type: SUV. Krav: Free.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?off%20road%20suv" alt="Off-Road SUV" loading="lazy">
+<div class="real-car-info"><h3>Off-Road SUV</h3><p>SUV</p><span class="car-badge">Free</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Sport Truck','Type: Truck. Krav: VIP.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?sport%20truck" alt="Sport Truck" loading="lazy">
+<div class="real-car-info"><h3>Sport Truck</h3><p>Truck</p><span class="car-badge">VIP</span></div>
+</button>
+<button class="real-car-card" type="button" onclick="showSimple('🚗 Electric Car','Type: Car. Krav: Free.','Vehicles')">
+<img src="https://images.unsplash.com/featured/640x400/?electric%20car" alt="Electric Car" loading="lazy">
+<div class="real-car-info"><h3>Electric Car</h3><p>Car</p><span class="car-badge">Free</span></div>
+</button>
+  </div>
+</section>
 
-  <div id="ferrari-featured-card" class="featured-vehicle">
-      <img src="https://static.wikia.nocookie.net/official-brookhaven/images/e/e1/BlueSuperCar.png/revision/latest?cb=20260111202430" alt="Ferrari">
-      <div>
-        <span class="visual-label">FEATURED VEHICLE</span>
-        <h3>🏎️ Ferrari</h3>
-        <p class="muted">Blue Supercar reference image.</p>
-        <button class="admin-action" type="button" onclick="openCarPhoto('Ferrari','https://static.wikia.nocookie.net/official-brookhaven/images/e/e1/BlueSuperCar.png/revision/latest?cb=20260111202430','Ferrari / Blue Supercar reference image for the Brookhaven Wiki.')">View vehicle</button>
-      </div>
-    </div>
-<div id="helicopter-featured-card" class="featured-vehicle"><section class="section" id="vehicles"><div class="section-head"><div><h2>🚗 Vehicles</h2><p class="muted">12 biler i et nyt, pænere design.</p></div><span class="count-badge">12 biler</span></div><div class="vehicle-tools"><input id="vehicleSearch"><select id="vehicleFilter"><option value="all">Alle</option></select></div><div class="vehicle-grid"><button class="vehicle-card" type="button" data-name="Executive Coupe" data-req="New Vehicle"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Executive Coupe</span><span class="vehicle-meta">New Vehicle</span></button><button class="vehicle-card" type="button" data-name="Street Sedan" data-req="New Vehicle"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Street Sedan</span><span class="vehicle-meta">New Vehicle</span></button><button class="vehicle-card" type="button" data-name="Sporty Hatchback" data-req="New Vehicle"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Sporty Hatchback</span><span class="vehicle-meta">New Vehicle</span></button><button class="vehicle-card" type="button" data-name="City Compact" data-req="Free"><div class="vehicle-icon">🚘</div><span class="vehicle-name">City Compact</span><span class="vehicle-meta">Free</span></button><button class="vehicle-card" type="button" data-name="Luxury SUV" data-req="Premium"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Luxury SUV</span><span class="vehicle-meta">Premium</span></button><button class="vehicle-card" type="button" data-name="Electric SUV" data-req="Free"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Electric SUV</span><span class="vehicle-meta">Free</span></button><button class="vehicle-card" type="button" data-name="Classic Pickup" data-req="Free"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Classic Pickup</span><span class="vehicle-meta">Free</span></button><button class="vehicle-card" type="button" data-name="Sport Truck" data-req="VIP"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Sport Truck</span><span class="vehicle-meta">VIP</span></button><button class="vehicle-card" type="button" data-name="Family Van" data-req="Free"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Family Van</span><span class="vehicle-meta">Free</span></button><button class="vehicle-card" type="button" data-name="Roadster" data-req="Premium"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Roadster</span><span class="vehicle-meta">Premium</span></button><button class="vehicle-card" type="button" data-name="Supercar" data-req="VIP"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Supercar</span><span class="vehicle-meta">VIP</span></button><button class="vehicle-card" type="button" data-name="Mini Scooter" data-req="Free"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Mini Scooter</span><span class="vehicle-meta">Free</span></button></div></section>
+lass="vehicle-icon">🚘</div><span class="vehicle-name">Supercar</span><span class="vehicle-meta">VIP</span></button><button class="vehicle-card" type="button" data-name="Mini Scooter" data-req="Free"><div class="vehicle-icon">🚘</div><span class="vehicle-name">Mini Scooter</span><span class="vehicle-meta">Free</span></button></div></section>
 g-vehicle" type="button" data-name="Ford Fairline" data-type="Car" data-req="VIP"
         onclick="openCatalogVehicle('Ford Fairline','Car','VIP')">
         <div class="catalog-vehicle-icon">🚗</div>
