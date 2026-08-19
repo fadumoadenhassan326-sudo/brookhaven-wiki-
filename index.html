@@ -106,6 +106,17 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
 .pass-badge{display:inline-block;padding:6px 9px;border-radius:999px;font-size:11px;letter-spacing:.08em;font-weight:900;background:#2e384b;color:#fff;margin:2px 0}
 .vip-badge{background:#56452a}.premium-badge{background:#24536b}
 .pass-modal-box{max-width:900px}.pass-modal-image{width:100%;max-height:55vh;object-fit:contain;border-radius:14px;background:#0b0f16;margin-bottom:14px}
+
+/* Modern vehicle cards */
+.vehicle-grid-modern{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.vehicle-modern{position:relative;overflow:hidden;border:1px solid #2c3b52;border-radius:18px;background:linear-gradient(145deg,#172235,#0b101a);padding:0;min-height:220px;box-shadow:0 10px 28px rgba(0,0,0,.25)}
+.vehicle-modern .car-visual{height:115px;display:flex;align-items:center;justify-content:center;font-size:62px;background:linear-gradient(135deg,#263852,#101925);border-bottom:1px solid #2c3b52}
+.vehicle-modern .car-info{padding:14px}
+.vehicle-modern h3{margin:0 0 8px;font-size:18px}
+.vehicle-modern p{margin:0;color:#aebdd0;font-size:14px}
+.vehicle-modern .pill{display:inline-block;margin-top:10px;padding:5px 9px;border-radius:999px;background:#263852;color:#dce7f5;font-size:12px;font-weight:800}
+@media(max-width:650px){.vehicle-grid-modern{grid-template-columns:1fr}}
+
 </style>
 <style>
 .admin-top-btn{margin-left:10px;padding:9px 14px;border:1px solid #64748b;border-radius:10px;background:#202838;color:#fff;font-weight:800;cursor:pointer}
@@ -697,6 +708,64 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
       </button>
   </div>
 </section>
+
+<section class="section" id="modern-vehicles">
+  <div class="section-head">
+    <div><h2>🚗 Vehicles</h2><p class="muted">12 biler i et moderne 1–2, 1–2 layout.</p></div>
+    <span class="count-badge">12 biler</span>
+  </div>
+  <div class="vehicle-grid-modern">
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Executive Coupe</h3><p>Coupe</p><span class="pill">New Vehicles</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Street Sedan</h3><p>Sedan</p><span class="pill">New Vehicles</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Sporty Hatchback</h3><p>Hatchback</p><span class="pill">New Vehicles</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>City Compact</h3><p>Compact</p><span class="pill">Free</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Luxury SUV</h3><p>SUV</p><span class="pill">Premium</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Electric SUV</h3><p>SUV</p><span class="pill">Free</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Classic Pickup</h3><p>Truck</p><span class="pill">Free</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Sport Truck</h3><p>Truck</p><span class="pill">VIP</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Family Van</h3><p>Van</p><span class="pill">Free</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Roadster</h3><p>Sports Car</p><span class="pill">Premium</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Supercar</h3><p>Sports Car</p><span class="pill">VIP</span></div>
+</article>
+<article class="vehicle-modern">
+  <div class="car-visual">🚘</div>
+  <div class="car-info"><h3>Mini Scooter</h3><p>Two-Wheeler</p><span class="pill">Free</span></div>
+</article>
+  </div>
+</section>
+
 <section class="section" id="houses">
     <h2>🏡 Houses</h2>
     <div class="grid">
