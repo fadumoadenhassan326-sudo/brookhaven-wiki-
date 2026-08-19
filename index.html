@@ -131,7 +131,7 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
 #scriptStatus{min-height:22px;text-align:center;color:#75e0a0;margin-top:8px}
 .script-help{font-size:13px;text-align:left!important}
 </style>
-</head>
+<style>#adminAccess{position:fixed;right:18px;bottom:18px;z-index:1000;padding:10px 14px;border-radius:14px}#adminGate{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:1001;align-items:center;justify-content:center}.open{display:flex!important}.admin-box{background:#161d2b;color:white;padding:24px;border-radius:20px;width:min(390px,90%)}#adminArea{display:none}.show{display:block!important}.tape-zone{position:relative;margin:28px 0;padding:35px 18px;border:3px dashed #f2c94c;border-radius:18px}.tape{position:absolute;left:0;right:0;height:32px;background:#f2c94c;color:#111;font-weight:900;text-align:center}.top{top:-16px}.bottom{bottom:-16px}</style></head>
 <body>
 <header>
   <h1>🏙️ Brookhaven Wiki</h1>
@@ -880,7 +880,7 @@ document.addEventListener("DOMContentLoaded", function(){
   };
 });
 </script>
-</body>
+<button id="adminAccess">🔒 Admin</button><div id="adminGate"><div class="admin-box"><h2>Admin adgang</h2><input id="adminCode" type="password" placeholder="Admin-kode"><button id="adminLogin">Åbn</button><p id="adminError" style="display:none">Forkert kode</p></div></div><section id="adminArea"><section class="tape-zone"><div class="tape top">🚧 COMING SOON 🚧</div><h2>🔒 Prison / Landmark Update</h2><p>Admin only – officielle teasers og billeder.</p><div class="tape bottom">🚧 COMING SOON 🚧</div></section><section class="tape-zone"><div class="tape top">🚧 WEBSITE REMAKE 🚧</div><h2>🛠️ Website Remake</h2><p>Admin only – planer og idéer.</p><div class="tape bottom">🚧 WEBSITE REMAKE 🚧</div></section></section><script>(()=>{const g=document.getElementById("adminGate"),a=document.getElementById("adminAccess"),c=document.getElementById("adminCode"),l=document.getElementById("adminLogin"),r=document.getElementById("adminArea"),e=document.getElementById("adminError");a.onclick=()=>g.classList.add("open");l.onclick=()=>{if(c.value==="Esben1234"){g.classList.remove("open");r.classList.add("show")}else e.style.display="block"};c.onkeydown=x=>{if(x.key==="Enter")l.click()}})();</script></body>
 </html
 
 >
