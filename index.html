@@ -163,7 +163,7 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
 
 </head>
 <body>
-<header>
+<header><div class="bh-logo"><span class="bh-mark">BH</span><span class="bh-word">BROOKHAVEN</span></div>
   <h1>🏙️ Brookhaven Wiki</h1>
   <p>Din fan-wiki til at opdage locations, vehicles, houses, secrets og updates.</p>
 </header>
@@ -172,7 +172,8 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
   <a href="#home">Forside</a>
   <a href="#categories">Kategorier</a>
   <a href="#secrets">🔐 Secrets</a><a href="#updates">Updates</a>
-  <a href="#about">Om Wiki</a></nav>
+  <a href="#about">Om Wiki</a>
+<button id="adminBtn" class="admin-top-btn" type="button">🔐 Admin</button></nav>
 
 <main class="container" id="home">
   <div class="search">
@@ -293,15 +294,13 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
   <div class="modal hidden" id="carPhotoModal">
     <div class="modal-box photo-modal-box">
       <button class="close-modal" id="closeCarPhoto">×</button>
-      <img id="carPhotoImage" class="full-photo" src="" alt<section class="section" id="vehicles">
-<div class="section-head"><div><h2>🚗 Vehicles</h2><p class="muted">Brookhaven vehicle gallery</p></div></div>
-<div class="real-vehicle-grid">
-<article class="real-vehicle-card"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80" alt="Sports Car"><div><h3>Sports Car</h3><p>Fast vehicle</p></div></article>
-<article class="real-vehicle-card"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" alt="Supercar"><div><h3>Supercar</h3><p>Premium vehicle</p></div></article>
-<article class="real-vehicle-card"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80" alt="SUV"><div><h3>SUV</h3><p>City vehicle</p></div></article>
-<article class="real-vehicle-card"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80" alt="Truck"><div><h3>Pickup Truck</h3><p>Utility vehicle</p></div></article>
-<article class="real-vehicle-card"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80" alt="Classic Car"><div><h3>Classic Car</h3><p>Classic vehicle</p></div></article>
-<article class="real-vehicle-card"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80" alt="Modern Car"><div><h3>Modern Car</h3><p>Premium vehicle</p></div></article>
+      <img id="carPhotoImage" class="full-photo" src="" alt<section class="section" id="vehicles"><div class="section-head"><div><h2>🚗 Vehicles</h2><p class="muted">Brookhaven-style vehicle gallery</p></div><span class="count-badge">Featured Vehicles</span></div><div class="vehicle-photo-grid">
+<article class="vehicle-photo-card"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" alt="Supercar"><div><h3>Supercar</h3><p>Fast · Premium style</p></div></article>
+<article class="vehicle-photo-card"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80" alt="Sports car"><div><h3>Sports Car</h3><p>Fast · Street style</p></div></article>
+<article class="vehicle-photo-card"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80" alt="SUV"><div><h3>SUV</h3><p>City · Family style</p></div></article>
+<article class="vehicle-photo-card"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80" alt="Pickup truck"><div><h3>Pickup Truck</h3><p>Utility vehicle</p></div></article>
+<article class="vehicle-photo-card"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80" alt="Classic car"><div><h3>Classic Car</h3><p>Classic style</p></div></article>
+<article class="vehicle-photo-card"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80" alt="Modern car"><div><h3>Modern Car</h3><p>Modern · Premium style</p></div></article>
 </div></section>
 
 <section class="section" id="houses">
@@ -397,13 +396,7 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
     </div>
   </section>
 
-  <section class="section" id="prison-landmark"><div class="prison-teaser">
-<div class="warning-tape top">🚧 PRISON LANDMARK • COMING SOON • PRISON LANDMARK 🚧</div>
-<span class="tag">TEASER</span><h2>🚔 Prison Landmark Update</h2><p>Coming Soon</p>
-<div class="prison-timer" id="prisonTimer">20:00</div><p class="muted" id="prisonStatus">Teaser countdown</p>
-<div class="warning-tape bottom">🚧 COMING SOON • PRISON LANDMARK • COMING SOON 🚧</div>
-</div></section>
-
+  <section class="section" id="prison-landmark"><div class="prison-teaser"><div class="warning-tape top">🚧 PRISON LANDMARK • COMING SOON • PRISON LANDMARK 🚧</div><div class="teaser-content"><span class="tag">TEASER</span><h2>🚔 Prison Landmark Update</h2><p>Coming Soon</p><div class="prison-timer" id="prisonTimer">20:00</div><p class="muted" id="prisonStatus">Teaser countdown</p></div><div class="warning-tape bottom">🚧 COMING SOON • PRISON LANDMARK • COMING SOON 🚧</div></div></section>
 <section class="section" id="updates">
     <div class="section-head">
       <div>
@@ -451,6 +444,17 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
     </div>
   </section>
 </main>
+
+
+  <section class="section" id="admin-changes">
+    <div class="section-head">
+      <div>
+        <h2>🛠️ My Admin Changes</h2>
+        <p class="muted">Items you add from the Admin panel appear here on this browser.</p>
+      </div>
+    </div>
+    <div id="adminContent" class="grid"></div>
+  </section>
 
 <footer>Brookhaven Wiki • Fan-made website</footer>
 
@@ -885,20 +889,60 @@ document.addEventListener("DOMContentLoaded", function(){
   };
 });
 </script>
+<div id="adminGate"><div class="admin-box"><h2>Admin adgang</h2><input id="adminCode" type="password" placeholder="Admin-kode"><button id="adminLogin">Åbn</button><p id="adminError" style="display:none">Forkert kode</p></div></div>
+<section id="adminArea">
+  <div class="admin-remake-head">
+    <span class="admin-tag">ADMIN ONLY</span>
+    <h2>👑 Admin Control</h2>
+    <p>Private område til teasers og kommende ændringer.</p>
+  </div>
 
-<style id="remake-fixes">
-#adminBtn,#adminAccess,#adminGate,#adminArea,#admin-changes{display:none!important}
-.real-vehicle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.real-vehicle-card{overflow:hidden;border:1px solid #334155;border-radius:18px;background:#111827}
-.real-vehicle-card img{display:block;width:100%;height:190px;object-fit:cover}
-.real-vehicle-card div{padding:14px}.real-vehicle-card h3{margin:0 0 5px}.real-vehicle-card p{margin:0;color:#aab6c8}
-.prison-teaser{position:relative;overflow:hidden;text-align:center;padding:62px 24px;border:2px solid #f0c94b;border-radius:24px;background:linear-gradient(135deg,#202838,#10151e)}
-.warning-tape{position:absolute;left:-5%;width:110%;padding:10px;background:#f0c94b;color:#111;font-weight:900;white-space:nowrap}
-.warning-tape.top{top:12px;transform:rotate(-2deg)}.warning-tape.bottom{bottom:12px;transform:rotate(2deg)}
-.prison-timer{font-size:clamp(48px,10vw,96px);font-weight:900;letter-spacing:4px;margin:14px 0}
-@media(max-width:800px){.real-vehicle-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.real-vehicle-grid{grid-template-columns:1fr}}
-</style>
-<script>(()=>{let left=1200;const out=document.getElementById('prisonTimer'),status=document.getElementById('prisonStatus');function tick(){if(!out)return;let m=Math.floor(left/60),s=left%60;out.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');if(left<=0){if(status)status.textContent='TEASER READY';return}left--;setTimeout(tick,1000)}tick()})();</script>
+  <section class="teaser" id="prisonTeaser">
+    <span class="admin-tag">ADMIN TEASER</span>
+    <h2>🚔 Prison Landmark</h2>
+    <p>Prison Landmark teaser — Coming Soon.</p>
+    <div class="timer">⏳ <span id="prisonTimer">15:00</span></div>
+  </section>
 
-</body>
-</html>
+  <section class="admin-card">
+    <span class="admin-tag">EXISTING UPDATE</span>
+    <h3>🏦 Bank Update</h3>
+    <p>Bank Update er allerede lagt ind som en eksisterende update og er ikke længere mærket som “ikke bekræftet”.</p>
+  </section>
+
+  <section class="teaser">
+    <span class="admin-tag">ADMIN ONLY</span>
+    <h2>🛠️ Website Remake</h2>
+    <p>Område til den næste redesign-version af hjemmesiden.</p>
+  </section>
+</section>
+
+<script id="admin-remake-script">
+(()=>{
+ const g=document.getElementById("adminGate"), a=document.getElementById("adminBtn"),
+ c=document.getElementById("adminCode"), l=document.getElementById("adminLogin"),
+ r=document.getElementById("adminArea"), e=document.getElementById("adminError");
+ if(a&&g) a.onclick=()=>{g.classList.add("open"); if(c)c.focus()};
+ function check(){
+   if(c&&c.value==="Esben1234"){g.classList.remove("open");r.classList.add("show");if(e)e.style.display="none"}
+   else if(e)e.style.display="block";
+ }
+ if(l)l.onclick=check;
+ if(c)c.onkeydown=x=>{if(x.key==="Enter")check()};
+ let left=15*60, out=document.getElementById("prisonTimer");
+ setInterval(()=>{if(left>0)left--;let m=Math.floor(left/60),s=left%60;if(out)out.textContent=`${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`},1000);
+})();
+</script>
+
+<div class="admin-overlay" id="adminOverlay" hidden><section class="admin-panel"><div class="admin-panel-head"><div><span class="admin-badge">ADMIN</span><h2>Admin Panel</h2></div><button class="admin-close" id="adminClose" type="button">×</button></div><div id="adminLoginView"><p>Indtast admin-koden.</p><input id="adminPassword" type="password" placeholder="Admin-kode"><button id="adminUnlock" type="button">Åbn Admin</button><p id="adminError"></p></div><div id="adminContentView" hidden><section class="admin-teaser-card"><div class="admin-tape">🚧 ADMIN TEASER • ADMIN ONLY • ADMIN TEASER 🚧</div><span class="admin-badge">ADMIN TEASER</span><h3>🚔 Prison Landmark Update</h3><p>Kun synlig inde i Admin Panel.</p><div class="admin-teaser-timer" id="adminTeaserTimer">20:00</div></section><section class="admin-teaser-card"><div class="admin-tape">🛠️ WEBSITE REMAKE • ADMIN ONLY • WEBSITE REMAKE 🛠️</div><span class="admin-badge">ADMIN</span><h3>Website Remake</h3><p>Admin preview og planlægning.</p></section></div></section></div><style>
+.bh-logo{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 12px;font-weight:900;letter-spacing:2px}.bh-mark{display:grid;place-items:center;width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#ff6b35,#ffd166);color:#10151e;font-size:24px}.bh-word{font-size:clamp(18px,4vw,30px);color:#fff}
+.vehicle-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.vehicle-photo-card{overflow:hidden;border:1px solid #334155;border-radius:18px;background:#111827}.vehicle-photo-card img{width:100%;height:190px;object-fit:cover;display:block}.vehicle-photo-card div{padding:14px}.vehicle-photo-card h3{margin:0 0 6px}.vehicle-photo-card p{margin:0;color:#aab6c8}
+.prison-teaser{position:relative;overflow:hidden;text-align:center;padding:62px 24px;border:2px solid #f0c94b;border-radius:24px;background:linear-gradient(135deg,#202838,#10151e)}.warning-tape{position:absolute;left:-5%;width:110%;padding:10px;background:#f0c94b;color:#111;font-weight:900;white-space:nowrap}.warning-tape.top{top:12px;transform:rotate(-2deg)}.warning-tape.bottom{bottom:12px;transform:rotate(2deg)}.prison-timer,.admin-teaser-timer{font-size:clamp(44px,9vw,82px);font-weight:900;letter-spacing:4px;margin:14px 0}
+.admin-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.7);display:grid;place-items:center;padding:18px}.admin-panel{width:min(720px,100%);max-height:90vh;overflow:auto;background:#111827;color:#fff;border:1px solid #475569;border-radius:24px;padding:22px}.admin-panel-head{display:flex;justify-content:space-between;align-items:center}.admin-close{border:0;border-radius:12px;padding:8px 14px;font-size:28px;cursor:pointer}.admin-badge{display:inline-block;background:#f0c94b;color:#111;border-radius:999px;padding:5px 10px;font-weight:900;font-size:12px}.admin-teaser-card{position:relative;overflow:hidden;margin-top:16px;padding:42px 20px 22px;border:1px solid #475569;border-radius:18px;background:linear-gradient(135deg,#202838,#10151e)}.admin-tape{position:absolute;left:-4%;top:10px;width:108%;padding:8px;background:#f0c94b;color:#111;font-weight:900;transform:rotate(-1.5deg);white-space:nowrap}
+@media(max-width:800px){.vehicle-photo-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.vehicle-photo-grid{grid-template-columns:1fr}}
+</style><script>
+(()=>{const b=document.getElementById('adminBtn'),o=document.getElementById('adminOverlay'),c=document.getElementById('adminClose'),p=document.getElementById('adminPassword'),u=document.getElementById('adminUnlock'),l=document.getElementById('adminLoginView'),v=document.getElementById('adminContentView'),e=document.getElementById('adminError');const CODE='Esben1234';function open(){o.hidden=false;if(sessionStorage.getItem('brookhavenAdmin')==='yes'){l.hidden=true;v.hidden=false}else{l.hidden=false;v.hidden=true}}function check(){if(p.value===CODE){sessionStorage.setItem('brookhavenAdmin','yes');e.textContent='';l.hidden=true;v.hidden=false}else e.textContent='Forkert kode.'}if(b)b.onclick=open;if(c)c.onclick=()=>o.hidden=true;if(u)u.onclick=check;if(p)p.onkeydown=x=>{if(x.key==='Enter')check()};if(o)o.onclick=x=>{if(x.target===o)o.hidden=true};let left=1200;const a=document.getElementById('prisonTimer'),d=document.getElementById('adminTeaserTimer'),s=document.getElementById('prisonStatus');function tick(){let m=Math.floor(left/60),z=left%60,val=String(m).padStart(2,'0')+':'+String(z).padStart(2,'0');if(a)a.textContent=val;if(d)d.textContent=val;if(left<=0){if(s)s.textContent='TEASER READY';return}left--;setTimeout(tick,1000)}tick()})();
+</script></body>
+</html
+
+>
