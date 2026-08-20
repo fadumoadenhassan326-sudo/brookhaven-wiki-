@@ -131,7 +131,23 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
 #scriptStatus{min-height:22px;text-align:center;color:#75e0a0;margin-top:8px}
 .script-help{font-size:13px;text-align:left!important}
 </style>
-<style>#adminAccess{position:fixed;right:18px;bottom:18px;z-index:1000;padding:10px 14px;border-radius:14px}#adminGate{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:1001;align-items:center;justify-content:center}.open{display:flex!important}.admin-box{background:#161d2b;color:white;padding:24px;border-radius:20px;width:min(390px,90%)}#adminArea{display:none}.show{display:block!important}.tape-zone{position:relative;margin:28px 0;padding:35px 18px;border:3px dashed #f2c94c;border-radius:18px}.tape{position:absolute;left:0;right:0;height:32px;background:#f2c94c;color:#111;font-weight:900;text-align:center}.top{top:-16px}.bottom{bottom:-16px}</style></head>
+<style>#adminAccess{position:fixed;right:18px;bottom:18px;z-index:1000;padding:10px 14px;border-radius:14px}#adminGate{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:1001;align-items:center;justify-content:center}.open{display:flex!important}.admin-box{background:#161d2b;color:white;padding:24px;border-radius:20px;width:min(390px,90%)}#adminArea{display:none}.show{display:block!important}.tape-zone{position:relative;margin:28px 0;padding:35px 18px;border:3px dashed #f2c94c;border-radius:18px}.tape{position:absolute;left:0;right:0;height:32px;background:#f2c94c;color:#111;font-weight:900;text-align:center}.top{top:-16px}.bottom{bottom:-16px}</style><style id="more-sections-style">
+.bh-car{transition:transform .2s ease,box-shadow .2s ease}
+.bh-car:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.bh-car p{padding:0 12px 14px;margin:0;color:#aab6c8}
+.bh-extra-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.bh-info-card{border:1px solid #475569;border-radius:18px;padding:20px;background:#111827}
+.bh-info-card h3{margin-top:0}.bh-pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#f2c94c;color:#111;font-weight:900;font-size:12px}
+.creator-avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#f2c94c;color:#111;font-weight:900;font-size:22px;margin-bottom:12px}
+@media(max-width:700px){.bh-extra-grid{grid-template-columns:1fr}}
+</style>
+<style id="admin-timer-repair-style">
+#bhPanel[hidden]{display:none!important}
+.bh-admin-teaser{margin-top:18px;padding:20px;border:2px solid #f2c94c;border-radius:18px;background:#10151e;text-align:center}
+#adminTimer{font-size:64px;font-weight:1000;letter-spacing:3px;margin:16px 0}
+</style>
+
+</head>
 <body>
 <header><div id="bh-main-logo"><span>BH</span><b>BROOKHAVEN</b></div>
   <h1>🏙️ Brookhaven Wiki</h1>
@@ -287,6 +303,13 @@ footer{text-align:center;color:#8993a3;padding:40px 20px;border-top:1px solid #2
 <div class="bh-car"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=80"><h3>Sports Car</h3></div>
 <div class="bh-car"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1000&q=80"><h3>SUV</h3></div>
 <div class="bh-car"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1000&q=80"><h3>Pickup</h3></div>
+</div></section><section class="section" id="helicopters">
+<h2>🚁 Helicopters</h2><p class="muted">Featured helicopters</p>
+<div class="bh-vehicles bh-heli-grid">
+<div class="bh-car"><img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1000&q=80" alt="City helicopter"><h3>City Helicopter</h3><p>Fast city transport</p></div>
+<div class="bh-car"><img src="https://images.unsplash.com/photo-1570716902944-3a6cbd1d5e9c?auto=format&fit=crop&w=1000&q=80" alt="VIP helicopter"><h3>VIP Helicopter</h3><p>VIP • Premium</p></div>
+<div class="bh-car"><img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?auto=format&fit=crop&w=1000&q=80" alt="Rescue helicopter"><h3>Rescue Helicopter</h3><p>Emergency style</p></div>
+<div class="bh-car"><img src="https://images.unsplash.com/photo-1526816229784-65d5d54ac8bc?auto=format&fit=crop&w=1000&q=80" alt="Private helicopter"><h3>Private Helicopter</h3><p>Private transport</p></div>
 </div></section><section class="section" id="houses">
     <h2>🏡 Houses</h2>
     <div class="grid">
@@ -853,6 +876,13 @@ document.addEventListener("DOMContentLoaded", function(){
       <p id="bhError"></p>
     </div>
     <div id="bhPanel" hidden>
+  <div class="bh-admin-teaser">
+    <div class="bh-tape">ADMIN ONLY • PRISON LANDMARK • COMING SOON</div>
+    <h2>🔒 Admin Teaser</h2>
+    <h3>🚔 Prison Landmark Update</h3>
+    <div id="adminTimer">20:00</div>
+    <p>Kun synlig efter korrekt admin-login.</p>
+  </div>
       <div class="admin-label">ADMIN TEASER</div>
       <h2>Prison Landmark Update</h2>
       <p>Kun admin kan se denne teaser.</p>
@@ -924,6 +954,36 @@ document.addEventListener("DOMContentLoaded", function(){
  tick();
 })();
 </script>
+<section class="section" id="videos">
+<h2>🎬 Videos & Update Teasers</h2>
+<div class="bh-extra-grid">
+<article class="bh-info-card"><h3>🔥 Super Cool Update</h3><p>Seneste teaser, update-idéer og Brookhaven-style nyheder.</p><span class="bh-pill">VIDEO</span></article>
+<article class="bh-info-card"><h3>🚔 Prison Landmark</h3><p>Coming Soon teaser med countdown på forsiden.</p><span class="bh-pill">TEASER</span></article>
+<article class="bh-info-card"><h3>📢 Stick Updates</h3><p>Et sted til korte update-klip og nyheder.</p><span class="bh-pill">UPDATES</span></article>
+</div></section>
+<section class="section" id="creators">
+<h2>⭐ Content Creators</h2>
+<p class="muted">En sektion til creators og deres Brookhaven-indhold.</p>
+<div class="bh-extra-grid">
+<article class="bh-info-card"><div class="creator-avatar">▶</div><h3>Creator Spotlight</h3><p>Videoer, updates og community-indhold.</p></article>
+<article class="bh-info-card"><div class="creator-avatar">★</div><h3>Featured Creator</h3><p>Plads til creator-navn og kanal.</p></article>
+<article class="bh-info-card"><div class="creator-avatar">🎮</div><h3>Gaming Creator</h3><p>Plads til Brookhaven-videoer.</p></article>
+</div></section>
+<script id="timer-repair">
+(()=>{
+  let left=1200;
+  const ids=["publicTimer","adminTimer"];
+  function tick(){
+    const m=Math.floor(left/60), s=left%60;
+    const value=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+    ids.forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=value;});
+    if(left>0) left--;
+    setTimeout(tick,1000);
+  }
+  tick();
+})();
+</script>
+
 </body>
 </html
 
